@@ -1,0 +1,10 @@
+class Vehicle:
+    def start_engine(self):
+        print("Engine starting...")
+
+class Car(Vehicle):
+    def start_engine(self):
+        print("Car engine starting quietly.")
+
+car = Car()
+car.start_engine()
