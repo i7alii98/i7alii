@@ -1,0 +1,21 @@
+class Employee:
+    def __init__(self, name, employee_id):
+        self.name = name
+        self.employee_id = employee_id
+
+    def display_details(self):
+        print(f"Name: {self.name}, ID: {self.employee_id}")
+
+class Manager(Employee):
+    def __init__(self, name, employee_id, department):
+        super().__init__(name, employee_id)
+        self.department = department
+
+    def display_details(self):
+        print(f"Name: {self.name}, ID: {self.employee_id}, Department: {self.department}")
+
+e = Employee("Ahmed", "E101")
+m = Manager("Fatima", "M201", "IT")
+
+e.display_details()
+m.display_details()
