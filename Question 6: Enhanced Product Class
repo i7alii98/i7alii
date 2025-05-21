@@ -1,0 +1,26 @@
+class Product:
+    def __init__(self, name, price, quantity_in_stock):
+        self.name = name
+        self.price = price
+        self.quantity_in_stock = quantity_in_stock
+
+    def get_total_value(self):
+        return self.price * self.quantity_in_stock
+
+    def add_stock(self, amount):
+        self.quantity_in_stock += amount
+
+    def remove_stock(self, amount):
+        if amount <= self.quantity_in_stock:
+            self.quantity_in_stock -= amount
+        else:
+            print("Not enough stock to remove.")
+
+    def print_details(self):
+        print(f"Product: {self.name}, Price: {self.price}, Stock: {self.quantity_in_stock}, Total Value: {self.get_total_value()}")
+
+# Example
+p = Product("Keyboard", 20, 10)
+p.add_stock(5)
+p.remove_stock(8)
+p.print_details()
